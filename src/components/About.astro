@@ -56,22 +56,36 @@
             </div>
         <script>
             const accordionHeader = document.querySelectorAll(".accordion-header");
-            if (accordionHeader === null) { console.log("No accordion header")}
-            accordionHeader.forEach((header) => {
-                header.addEventListener("click", function () {
-                    const accordionContent = header.parentElement.querySelector(".accordion-content");
-                    
+if (accordionHeader.length === 0) { 
+    console.log("No accordion header found");
+} else {
+    accordionHeader.forEach((header) => {
+        header.addEventListener("click", function () {
+            const parentElement = header.parentElement;
+            
+            if (parentElement) {
+                const accordionContent = parentElement.querySelector(".accordion-content");
+
+                if (accordionContent && accordionContent instanceof HTMLElement) {
                     let accordionMaxHeight = accordionContent.style.maxHeight;
             
                     // Condition handling
-                    if (accordionMaxHeight == "0px" || accordionMaxHeight.length == 0) {
-                    accordionContent.style.maxHeight = `${accordionContent.scrollHeight + 32}px`;
+                    if (accordionMaxHeight === "0px" || accordionMaxHeight.length === 0) {
+                        accordionContent.style.maxHeight = `${accordionContent.scrollHeight + 32}px`;
                     } else {
-                    accordionContent.style.maxHeight = `0px`;
+                        accordionContent.style.maxHeight = `0px`;
                     }
-                });
-            });
-            //"Added IDs to sections in About, Posts, Timeline, and Layout components; updated image sources in Posts and testimonial sections; added class to html tag in Layout component."
+                } else {
+                    console.log("No valid accordion content found for this header");
+                }
+            } else {
+                console.log("No parent element found for this header");
+            }
+        });
+    });
+}
+
+
         </script>
     </article>
 </section>
