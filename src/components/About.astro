@@ -1,0 +1,113 @@
+---
+
+---
+
+<section class="bg-[#f7f7f7] px-4 py-24 md:flex md:flex-row md:gap-8 md:justify-center md:items-start">
+    <article class="flex flex-col gap-12">
+        <header class="sectionHeaderTitle">
+            <span class="erlingSubtitle relative uppercase">
+                <span class="sectionSubTitle">Fabricio Jordán</span>
+            </span>
+            <h3 class="text-3xl font-semibold md:max-w-96 md:text-balance md:text-4xl">UI Designer based in Montevideo, Uruguay since 2020</h3>
+        </header>
+
+        <p class="text-[#868a9b] max-w-2xl md:max-w-96">
+            My name is Fabricio Jordán and I am a UI Designer, and I'm very passionate and dedicated to my work. With 3 years experience as a professional UI designer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration.
+        </p>
+
+        <footer>
+            <a class="bg-black py-4 px-8 text-white hover:bg-[#000000ab] transition-colors duration-300" href="/src/assets/images/cv-1.jpg" download="">Download CV</a>
+        </footer>
+    </article>
+
+    <article class="md:w-full md:max-w-md">
+            <div class="">
+                <div class="py-4 flex flex-col gap-4 font-Syne
+                 [&>div]:transition-transform [&>div]:duration-500 [&>div]:bg-[#eaeaea]
+                    [&_h3]:font-bold [&_h3]:tracking-wider
+                    ">
+
+                    <div>
+                        <div class="accordion-header transition-transform duration-500 cursor-pointer flex space-x-5 px-5 items-center h-16">
+                            <i><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg></i>
+                            <h3>PERSONAL DETAILS</h3>
+                        </div>
+                        <footer class="accordion-content px-5 pt-0 overflow-hidden max-h-0 bg-white">
+                            <ul class="text-[#868a9b] p-4 flex flex-col gap-4 [&>li]:flex [&>li]:flex-row [&>li]:gap-4">
+                                <li>
+                                    <span>Name:</span>
+                                    <span>Fabricio Jordán</span>
+                                </li>
+                                <li>
+                                    <span>Email:</span>
+                                    <span><a class="text-black" href="#">yourmail@gmail.com</a></span>
+                                </li>
+                                <li>
+                                    <span>Phone:</span>
+                                    <span><a class="text-black" href="#">+598 92 92 92 92</a></span>
+                                </li>
+                            </ul>
+                        </footer>
+                    </div>
+
+                </div>
+            </div>
+        <script>
+            const accordionHeader = document.querySelectorAll(".accordion-header");
+            if (accordionHeader === null) { console.log("No accordion header")}
+            accordionHeader.forEach((header) => {
+                header.addEventListener("click", function () {
+                    const accordionContent = header.parentElement.querySelector(".accordion-content");
+                    
+                    let accordionMaxHeight = accordionContent.style.maxHeight;
+            
+                    // Condition handling
+                    if (accordionMaxHeight == "0px" || accordionMaxHeight.length == 0) {
+                    accordionContent.style.maxHeight = `${accordionContent.scrollHeight + 32}px`;
+                    } else {
+                    accordionContent.style.maxHeight = `0px`;
+                    }
+                });
+            });
+            
+        </script>
+    </article>
+</section>
+
+
+<style>
+    .accordion-content {
+        transition: max-height 0.3s ease-out, padding 0.3s ease;
+    }
+    
+	#erlingText{
+		-webkit-text-stroke:1px #000;
+		color: transparent;
+	}
+
+    
+	.erlingSubtitle::before{
+		position: absolute;
+		content: "";
+		width: 40px;
+		height: 1px;
+		background-color: #868a9b;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	.erlingSubtitle::before{
+		position: absolute;
+		content: "";
+		width: 40px;
+		height: 1px;
+		background-color: #868a9b;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+</style>

@@ -1,0 +1,64 @@
+---
+
+---
+
+<footer class="bg-[#333] text-white w-full flex justify-center items-center p-12">
+
+    <div class="flex flex-col md:flex-row md:justify-around gap-4 justify-center items-center">
+        <h2 class="uppercase font-black text-3xl tracking-wider">Erling</h2>
+
+        <p class="font-medium font-Syne">Copyright © 2024 by Marketify</p>
+    </div>
+
+</footer>
+
+
+<style>
+    .accordion-content {
+        transition: max-height 0.3s ease-out, padding 0.3s ease;
+    }
+
+    
+	/* underlines	*/
+            
+    p {
+        display: block;
+        position: relative;
+        padding: 0.2em 0;
+    }
+
+    /* Fade in */
+    p::after, span::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #ffffff;
+        opacity: 0;
+        transition: opacity 300ms, transform 300ms;
+    }
+
+    p:hover::after,
+    p:focus::after,
+    span::after{
+        opacity: 1;
+        transform: translate3d(0, 0.2em, 0);
+    }
+
+    /* Slide in */
+    div p{
+        overflow: hidden;
+    }
+
+    div p::after{
+        opacity: 1;
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    div p:hover::after,
+    div p:focus::after{
+        transform: translate3d(0, 0, 0);
+    }
+</style>

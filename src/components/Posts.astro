@@ -1,0 +1,188 @@
+---
+import post1Image from "/src/assets/images/posts/post-1.jpg"
+import post2Image from "/src/assets/images/posts/post-2.jpg"
+import post3Image from "/src/assets/images/posts/post-3.jpg"
+---
+
+<section class="px-4 py-16 md:py-24 font-Syne flex flex-col gap-16 md:max-w-4xl md:m-auto md:w-full">
+                
+    <header class="sectionHeaderTitle">
+        <span class="erlingSubtitle relative">
+            <span class="sectionSubTitle">BLOG</span>
+        </span>
+        <h3 class="text-3xl font-semibold">Recent Posts</h3>
+    </header>
+
+    <div class="flex flex-col justify-center items-stretch md:flex-row gap-4 [&>article]:flex [&>article]:flex-col [&>article]:gap-4">
+
+        <article>
+            <header class="overflow-hidden relative">
+                <a class="overflow-hidden" href="">
+                    <img class="w-full h-full transition-transform duration-300 hover:scale-105" src={post1Image?.src} alt="">
+                </a>
+
+                <div class="absolute top-4 left-4 bg-white px-4 py-2">
+                    <time datetime="">Nov 30, 2023</time>
+                </div>
+            </header>
+
+            <footer class="bg-[#f5f5f5] text-start">
+                <div class="bg-[#eaeaea] px-8 py-4">
+                    <p class="textPost relative text-[#868a9b] [&_A]:text-black [&>span]:flex [&>span]:justify-start [&>span]:items-center [&>span]:gap-2 flex flex-row gap-2">
+                        <span class="firstPostSpan postsSpan relative">
+                            By <a class="" href="">Bernard</a>
+                        </span>
+
+                        <span class="relative">
+                            In <a href="">Design</a>
+                        </span>
+                    </p>
+                </div>
+
+                <div>
+                    <p class="postText">Secrets of the Mobile Application</p>
+                </div>
+            </footer>
+        </article>
+
+        <article>
+            <header class="overflow-hidden relative">
+                <a href="">
+                    <img class="w-full h-full transition-transform duration-300 hover:scale-105" src={post1Image?.src} alt="">
+                </a>
+
+                <div class="absolute top-4 left-4 bg-white px-4 py-2">
+                    <time datetime="">Nov 30, 2023</time>
+                </div>
+            </header>
+
+            <footer class="bg-[#f5f5f5] text-start">
+                <div class="bg-[#eaeaea] px-8 py-4">
+                    <p class="textPost relative text-[#868a9b] [&_A]:text-black [&>span]:flex [&>span]:justify-start [&>span]:items-center [&>span]:gap-2 flex flex-row gap-2">
+                        <span class="firstPostSpan postsSpan relative">
+                            By <a class="" href="">Bernard</a>
+                        </span>
+
+                        <span class="relative">
+                            In <a href="">Design</a>
+                        </span>
+                    </p>
+                </div>
+
+                <div>
+                    <p class="postText">Secrets of the Mobile Application</p>
+                </div>
+            </footer>
+        </article>
+
+        <article>
+            <header class="overflow-hidden relative">
+                <a href="">
+                    <img class="w-full h-full transition-transform duration-300 hover:scale-105" src={post1Image?.src} alt="">
+                </a>
+
+                <div class="absolute top-4 left-4 bg-white px-4 py-2">
+                    <time datetime="">Nov 30, 2023</time>
+                </div>
+            </header>
+
+            <footer class="bg-[#f5f5f5] text-start">
+                <div class="bg-[#eaeaea] px-8 py-4">
+                    <p class="textPost relative text-[#868a9b] [&_A]:text-black [&>span]:flex [&>span]:justify-start [&>span]:items-center [&>span]:gap-2 flex flex-row gap-2">
+                        <span class="firstPostSpan postsSpan relative">
+                            By <a class="" href="">Bernard</a>
+                        </span>
+
+                        <span class="relative">
+                            In <a href="">Design</a>
+                        </span>
+                    </p>
+                </div>
+
+                <div>
+                    <p class="postText">Secrets of the Mobile Application</p>
+                </div>
+            </footer>
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<style>
+    
+    article > header > a{
+        padding: 0!important;
+    }
+    time{
+        color:#868a9b;
+    }
+
+    footer > div:has(.postText){
+        padding: 2rem; /* 32px */
+    }
+    .postText{
+        font-weight: 800;
+        font-size: 1.25rem; /* 20px */
+        line-height: 1.75rem; /* 28px */
+        letter-spacing: 0.025em;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+    }
+
+    
+    @media (width >= 768px) {
+        footer > div:has(.postText){
+            padding: 1.5rem; /* 24px */
+        }
+    }
+    
+	/* underlines	*/
+            
+    a {
+        display: block;
+        position: relative;
+        padding: 0.2em 0;
+    }
+
+    /* Fade in */
+    a::after, .postText::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #000000;
+        opacity: 0;
+        transition: opacity 300ms, transform 300ms;
+    }
+
+    a:hover::after,
+    a:focus::after,
+    .postText::after{
+        opacity: 1;
+        transform: translate3d(0, 0.2em, 0);
+    }
+
+    /* Slide in */
+    span a{
+        overflow: hidden;
+    }
+
+    span a::after , .postText::after{
+        opacity: 1;
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    span a:hover::after,
+    span a:focus::after,
+    .postText:hover::after,
+    .postText:focus::after{
+        transform: translate3d(0, 0, 0);
+    }
+
+</style>
