@@ -4,6 +4,8 @@ import Swaper from '../components/Swaper.astro'
 import Posts from '../components/Posts.astro';
 import About from '../components/About.astro';
 import Timeline from '../components/Timeline.astro';
+
+import testimonialImage from "/src/assets/images/profilePic1.jpg"
 ---
 
 <Layout title="Portfolio Web Prototype Nro.2">
@@ -33,7 +35,7 @@ import Timeline from '../components/Timeline.astro';
 		<About />
 
 		<!-- Services -->
-		<section class="px-4 py-8 md:py-24 flex flex-col gap-12 font-Syne md:max-w-4xl md:m-auto md:w-full">
+		<section id="services" class="px-4 py-8 md:py-24 flex flex-col gap-12 font-Syne md:max-w-4xl md:m-auto md:w-full">
 			<article>
 				<header class="sectionHeaderTitle">
 					<span class="erlingSubtitle relative">
@@ -119,14 +121,14 @@ import Timeline from '../components/Timeline.astro';
 			</section>
 		</section>
 
-		<section class="p-4 bg-[#f7f7f7]">
+		<section id="portfolio" class="p-4 bg-[#f7f7f7]">
 			<Swaper />
 		</section>
 		
 		<Timeline />
 
 		<!-- testimonial -->
-		<section class="px-4 py-8 md:py-24 bg-[#f7f7f7] font-Syne">
+		<section id="testimonial" class="px-4 py-8 md:py-24 bg-[#f7f7f7] font-Syne">
 			<div class=" flex flex-col gap-12 md:max-w-4xl md:m-auto md:w-full">
 				<header class="sectionHeaderTitle">
 					<span class="erlingSubtitle relative">
@@ -142,7 +144,7 @@ import Timeline from '../components/Timeline.astro';
 							<p class="text-[#868a9b]">Graphic Designer</p>
 						</div>
 	
-						<img class="rounded-[1000px] size-16" src="/src/assets/images/profilePic1.jpg" alt="">
+						<img class="rounded-[1000px] size-16" src={testimonialImage?.src} alt="">
 					</header>
 	
 					<div class="p-6 py-12 bg-white leading-8 text-[#868a9b]">
@@ -165,7 +167,7 @@ import Timeline from '../components/Timeline.astro';
 		<Posts />
 
 		<!-- contact -->
-		<section class="p-4 py-16 bg-[#f7f7f7] font-Syne">
+		<section id="contact" class="p-4 py-16 bg-[#f7f7f7] font-Syne">
 			<article class=" flex flex-col gap-12 md:max-w-4xl md:m-auto md:w-full">
 				<header class="sectionHeaderTitle">
 					<span class="erlingSubtitle relative">
