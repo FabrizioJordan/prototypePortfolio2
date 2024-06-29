@@ -4,8 +4,10 @@ import Posts from '../components/Posts.astro';
 import About from '../components/About.astro';
 import Timeline from '../components/Timeline.astro';
 import Projects from '../components/Projects.astro';
+import Services from '../components/Services.astro';
+import Testimonial from '../components/Testimonial.astro';
+import Contact from '../components/Contact.astro';
 
-import testimonialImage from "/src/assets/images/profilePic1.jpg"
 ---
 
 <Layout title="Portfolio Web Prototype Nro.2">
@@ -13,7 +15,7 @@ import testimonialImage from "/src/assets/images/profilePic1.jpg"
 	<main class="flex flex-col gap-8">
 		
 		<!-- init -->
-		<section class="flex flex-col md:flex-row justify-center items-center gap-12 py-4 md:py-24">
+		<section class="flex flex-col md:flex-row justify-center items-center gap-12 py-6 md:py-24">
 			<article class="relative w-auto h-[300px]">
 				<div class="relative size-[300px] md:size-[380px] p-4 bg-cover bg-[#e5e5e5] rounded-[1000px]">
 					<div class="absolute m-auto top-0 left-0 right-0 bottom-0 z-10 size-[260px] md:size-[320px] bg-no-repeat bg-center bg-cover bg-[url('/src/assets/images/1.jpg')] rounded-[1000px] animate-morph"></div>
@@ -34,92 +36,7 @@ import testimonialImage from "/src/assets/images/profilePic1.jpg"
 
 		<About />
 
-		<!-- Services -->
-		<section id="services" class="px-4 py-8 md:py-24 flex flex-col gap-12 font-Syne md:max-w-4xl md:m-auto md:w-full">
-			<article>
-				<header class="sectionHeaderTitle">
-					<span class="erlingSubtitle relative">
-						<span class="sectionSubTitle">Services</span>
-					</span>
-					<h3 class="sectionTitle font-semibold">Quality Services</h3>
-				</header>
-			</article>
-			<section>
-				<ul class="listOfServices [&>li]:bg-[#f7f7f7] flex flex-col gap-8 md:flex md:flex-row md:[&>li]:w-full
-					[&>li>article]:relative [&>li>article]:px-8 [&>li>article]:py-8 [&>li>article]:flex [&>li>article]:flex-col [&>li>article]:justify-center [&>li>article]:items-start [&>li>article]:gap-8 hover:[&>li_header>svg]:opacity-100
-					">
-					<li>
-						<article>
-							<header>
-								<svg class="svg replaced-svg serviceSvg" xmlns="http://www.w3.org/2000/svg" height="42px" width="42px" viewBox="0 -59 400 400"><path d="m329.5 30h-89.5v-20.199219c.101562-5.300781-4.199219-9.699219-9.5-9.800781-.101562 0-.199219 0-.300781 0h-61.199219c-5.398438-.0976562-9.898438 4.203125-10 9.703125v.097656 20.199219h-89.300781c-5.5 0-10 4.5-10 10s4.5 10 10 10h60.601562c-24.199219 21-39.300781 50.800781-39.300781 83.703125v67.296875h-18.199219c-5.402343 0-9.800781 4.402344-9.800781 9.800781v.199219 61.203125c-.101562 5.296875 4.199219 9.699219 9.5 9.796875h.300781 61.199219c5.398438.101562 9.898438-4.296875 10-9.699219v-.097656-61.203125c0-5.5-4.5-10-10-10h-23v-67.296875c.101562-33.101563 18.601562-63.300781 48-78.5v15.796875c0 5.5 4.398438 10 9.898438 10h61.300781c5.402343 0 9.800781-4.398438 9.800781-9.796875 0-.101563 0-.101563 0-.203125v-15.796875c29.398438 15.097656 48 45.398437 48 78.5v67.296875h-22.800781c-5.597657 0-10.097657 4.402344-10.199219 10v61.203125c.101562 5.5 4.699219 9.898437 10.199219 9.796875h61.199219c5.203124.101562 9.5-4.097656 9.601562-9.398438 0-.101562 0-.300781 0-.398437v-61.203125c.199219-5.296875-4-9.796875-9.300781-10-.097657 0-.199219 0-.300781 0h-18.398438v-67.296875c0-33-14.800781-62.703125-39-83.703125h60.5c5.5 0 10-4.5 10-10s-4.5-10-10-10zm-205.5 232h-41v-41h41zm192 0h-41v-41h41zm-137-201v-41h41v16.601562 6.898438 17.5zm0 0"></path><g><path d="m39.101562 80.300781c-21.5 0-39.101562-17.898437-39.101562-39.898437s17.5-39.902344 39.101562-39.902344c21.597657 0 39.097657 17.902344 39.097657 39.902344s-17.597657 39.898437-39.097657 39.898437zm0-59.800781c-10.5 0-19.101562 8.902344-19.101562 19.902344s8.601562 19.898437 19.101562 19.898437 19.097657-8.898437 19.097657-19.898437-8.597657-19.902344-19.097657-19.902344zm0 0"></path><path d="m360.101562 79.5c-22 0-39.902343-17.5-39.902343-39.097656 0-21.601563 17.902343-39.101563 39.902343-39.101563s39.898438 17.5 39.898438 39.101563c0 21.597656-17.898438 39.097656-39.898438 39.097656zm0-58.199219c-11 0-19.902343 8.601563-19.902343 19.101563s8.902343 19.097656 19.902343 19.097656 19.898438-8.597656 19.898438-19.097656-8.898438-19.101563-19.898438-19.101563zm0 0"></path></g></svg>
-							</header>
-							<h4 class="font-bold text-xl">
-								Creative Design
-							</h4>
-							<ul class="listServices [&>li]:relative [&>li]:pl-4 text-[#868a9b] flex flex-col justify-center items-start gap-4 pt-8 border-t border-[#0000001a] w-full">
-								<li class="">
-									Figma Design
-								</li>
-								<li class="">
-									PSD Design
-								</li>
-								<li class="">
-									Sketch Design
-								</li>
-							</ul>
-
-							<div class="absolute bottom-0 left-0  w-3/12 h-2 bg-[#bebebe]"></div>
-						</article>
-					</li>
-					<li>
-						<article>
-							<header>
-								<svg class="svg replaced-svg serviceSvg" xmlns="http://www.w3.org/2000/svg" height="42px" width="42px" viewBox="0 -59 400 400"><path d="m329.5 30h-89.5v-20.199219c.101562-5.300781-4.199219-9.699219-9.5-9.800781-.101562 0-.199219 0-.300781 0h-61.199219c-5.398438-.0976562-9.898438 4.203125-10 9.703125v.097656 20.199219h-89.300781c-5.5 0-10 4.5-10 10s4.5 10 10 10h60.601562c-24.199219 21-39.300781 50.800781-39.300781 83.703125v67.296875h-18.199219c-5.402343 0-9.800781 4.402344-9.800781 9.800781v.199219 61.203125c-.101562 5.296875 4.199219 9.699219 9.5 9.796875h.300781 61.199219c5.398438.101562 9.898438-4.296875 10-9.699219v-.097656-61.203125c0-5.5-4.5-10-10-10h-23v-67.296875c.101562-33.101563 18.601562-63.300781 48-78.5v15.796875c0 5.5 4.398438 10 9.898438 10h61.300781c5.402343 0 9.800781-4.398438 9.800781-9.796875 0-.101563 0-.101563 0-.203125v-15.796875c29.398438 15.097656 48 45.398437 48 78.5v67.296875h-22.800781c-5.597657 0-10.097657 4.402344-10.199219 10v61.203125c.101562 5.5 4.699219 9.898437 10.199219 9.796875h61.199219c5.203124.101562 9.5-4.097656 9.601562-9.398438 0-.101562 0-.300781 0-.398437v-61.203125c.199219-5.296875-4-9.796875-9.300781-10-.097657 0-.199219 0-.300781 0h-18.398438v-67.296875c0-33-14.800781-62.703125-39-83.703125h60.5c5.5 0 10-4.5 10-10s-4.5-10-10-10zm-205.5 232h-41v-41h41zm192 0h-41v-41h41zm-137-201v-41h41v16.601562 6.898438 17.5zm0 0"></path><g><path d="m39.101562 80.300781c-21.5 0-39.101562-17.898437-39.101562-39.898437s17.5-39.902344 39.101562-39.902344c21.597657 0 39.097657 17.902344 39.097657 39.902344s-17.597657 39.898437-39.097657 39.898437zm0-59.800781c-10.5 0-19.101562 8.902344-19.101562 19.902344s8.601562 19.898437 19.101562 19.898437 19.097657-8.898437 19.097657-19.898437-8.597657-19.902344-19.097657-19.902344zm0 0"></path><path d="m360.101562 79.5c-22 0-39.902343-17.5-39.902343-39.097656 0-21.601563 17.902343-39.101563 39.902343-39.101563s39.898438 17.5 39.898438 39.101563c0 21.597656-17.898438 39.097656-39.898438 39.097656zm0-58.199219c-11 0-19.902343 8.601563-19.902343 19.101563s8.902343 19.097656 19.902343 19.097656 19.898438-8.597656 19.898438-19.097656-8.898438-19.101563-19.898438-19.101563zm0 0"></path></g></svg>
-							</header>
-							<h4 class="font-bold text-xl">
-								Creative Design
-							</h4>
-							<ul class="listServices [&>li]:relative [&>li]:pl-4 text-[#868a9b] flex flex-col justify-center items-start gap-4 pt-8 border-t border-[#0000001a] w-full">
-								<li class="">
-									Figma Design
-								</li>
-								<li class="">
-									PSD Design
-								</li>
-								<li class="">
-									Sketch Design
-								</li>
-							</ul>
-
-							<div class="absolute bottom-0 left-0 w-6/12 h-2 bg-[#bebebe]"></div>
-						</article>
-					</li>
-					<li>
-						<article>
-							<header>
-								<svg class="svg replaced-svg serviceSvg" xmlns="http://www.w3.org/2000/svg" height="42px" width="42px" viewBox="0 -59 400 400"><path d="m329.5 30h-89.5v-20.199219c.101562-5.300781-4.199219-9.699219-9.5-9.800781-.101562 0-.199219 0-.300781 0h-61.199219c-5.398438-.0976562-9.898438 4.203125-10 9.703125v.097656 20.199219h-89.300781c-5.5 0-10 4.5-10 10s4.5 10 10 10h60.601562c-24.199219 21-39.300781 50.800781-39.300781 83.703125v67.296875h-18.199219c-5.402343 0-9.800781 4.402344-9.800781 9.800781v.199219 61.203125c-.101562 5.296875 4.199219 9.699219 9.5 9.796875h.300781 61.199219c5.398438.101562 9.898438-4.296875 10-9.699219v-.097656-61.203125c0-5.5-4.5-10-10-10h-23v-67.296875c.101562-33.101563 18.601562-63.300781 48-78.5v15.796875c0 5.5 4.398438 10 9.898438 10h61.300781c5.402343 0 9.800781-4.398438 9.800781-9.796875 0-.101563 0-.101563 0-.203125v-15.796875c29.398438 15.097656 48 45.398437 48 78.5v67.296875h-22.800781c-5.597657 0-10.097657 4.402344-10.199219 10v61.203125c.101562 5.5 4.699219 9.898437 10.199219 9.796875h61.199219c5.203124.101562 9.5-4.097656 9.601562-9.398438 0-.101562 0-.300781 0-.398437v-61.203125c.199219-5.296875-4-9.796875-9.300781-10-.097657 0-.199219 0-.300781 0h-18.398438v-67.296875c0-33-14.800781-62.703125-39-83.703125h60.5c5.5 0 10-4.5 10-10s-4.5-10-10-10zm-205.5 232h-41v-41h41zm192 0h-41v-41h41zm-137-201v-41h41v16.601562 6.898438 17.5zm0 0"></path><g><path d="m39.101562 80.300781c-21.5 0-39.101562-17.898437-39.101562-39.898437s17.5-39.902344 39.101562-39.902344c21.597657 0 39.097657 17.902344 39.097657 39.902344s-17.597657 39.898437-39.097657 39.898437zm0-59.800781c-10.5 0-19.101562 8.902344-19.101562 19.902344s8.601562 19.898437 19.101562 19.898437 19.097657-8.898437 19.097657-19.898437-8.597657-19.902344-19.097657-19.902344zm0 0"></path><path d="m360.101562 79.5c-22 0-39.902343-17.5-39.902343-39.097656 0-21.601563 17.902343-39.101563 39.902343-39.101563s39.898438 17.5 39.898438 39.101563c0 21.597656-17.898438 39.097656-39.898438 39.097656zm0-58.199219c-11 0-19.902343 8.601563-19.902343 19.101563s8.902343 19.097656 19.902343 19.097656 19.898438-8.597656 19.898438-19.097656-8.898438-19.101563-19.898438-19.101563zm0 0"></path></g></svg>
-							</header>
-							<h4 class="font-bold text-xl">
-								Creative Design
-							</h4>
-							<ul class="listServices [&>li]:relative [&>li]:pl-4 text-[#868a9b] flex flex-col justify-center items-start gap-4 pt-8 border-t border-[#0000001a] w-full">
-								<li class="">
-									Figma Design
-								</li>
-								<li class="">
-									PSD Design
-								</li>
-								<li class="">
-									Sketch Design
-								</li>
-							</ul>
-							
-							<div class="absolute bottom-0 left-0 w-9/12 h-2 bg-[#bebebe]"></div>
-						</article>
-					</li>
-				</ul>
-			</section>
-		</section>
+		<Services />
 
 		<section id="portfolio" class="bg-[#f7f7f7]">
 			<Projects />
@@ -127,71 +44,12 @@ import testimonialImage from "/src/assets/images/profilePic1.jpg"
 		
 		<Timeline />
 
-		<!-- testimonial -->
-		<section id="testimonial" class="px-4 py-8 md:py-24 bg-[#f7f7f7] font-Syne">
-			<div class=" flex flex-col gap-12 md:max-w-4xl md:m-auto md:w-full">
-				<header class="sectionHeaderTitle">
-					<span class="erlingSubtitle relative">
-						<span class="sectionSubTitle">TESTIMONIAL</span>
-					</span>
-					<h3 class="sectionTitle font-semibold">Valuable Feedback</h3>
-				</header>
-	
-				<article class="flex flex-col relative overflow-hidden">
-					<header class="bg-[#eaeaea] p-6 flex flex-row justify-between items-center">
-						<div>
-							<h3 class="font-bold">ALBERT KENNEDY</h3>
-							<p class="text-[#868a9b]">Graphic Designer</p>
-						</div>
-	
-						<img class="rounded-[1000px] size-16" src={testimonialImage?.src} alt="">
-					</header>
-	
-					<div class="p-6 py-12 bg-white leading-8 text-[#868a9b]">
-						<span class="z-10 relative">	
-	
-						</span>
-	
-						<p class="z-10 relative">I generally begin with what people are doing well. It’s too deflating for them if you start by immediately identifying all the things that are wrong. There’s a tipping point when any more negative feedback could shatter their confidence. If it’s really bad work, I ask them to stop and have a different kind of discussion. There are times where you may need just to say, ‘Stop, we need to reset. I generally begin with what people are doing well. It’s too deflating for them if you start by immediately identifying all the things that are wrong.</p>
-						
-						<svg class="absolute bottom-[-60px] right-[-40px] w-96 h-96 z-0 opacity-20" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" >
-							<path d="M9.13456 9H12.1346L10 14.6075H7L9.13456 9Z" fill="#000000"></path>
-							<path d="M14.1346 9H17.1346L15 14.6075H12L14.1346 9Z" fill="#000000"></path>
-						</svg>
-					</div>
-				</article>
-	
-			</div>
-		</section>
+		<Testimonial />
 
 		<Posts />
 
-		<!-- contact -->
-		<section id="contact" class="p-4 py-16 bg-[#f7f7f7] font-Syne">
-			<article class=" flex flex-col gap-12 md:max-w-4xl md:m-auto md:w-full">
-				<header class="sectionHeaderTitle">
-					<span class="erlingSubtitle relative">
-						<span class="sectionSubTitle">CONTACT</span>
-					</span>
-					<h3 class="sectionTitle font-semibold">Get in Touch</h3>
-				</header>
-	
-				<div>
-					<div class="accordion-header transition-transform duration-500 cursor-pointer flex space-x-5 px-5 items-center h-16 bg-[#eaeaea]">
-						<h3 class="font-bold">PERSONAL DETAILS</h3>
-					</div>
-					<footer class="accordion-content px-5 pt-0 overflow-hidden max-h-0 bg-white">
-						<ul class="">
-							<p class="text-[#868a9b] p-4 inline-block leading-8">
-								Our company provides services for our customers between 9:00 a.m. and 8:00 p.m. ET, Monday through Friday. You can visit or call during these days.
-								<span class="flex"><span class="font-semibold block">Weekends</span> : Saturday and Sunday.</span>
-							</p>
-						</ul>
-					</footer>
-				</div>
-			</article>
-		</section>
-
+		<Contact />
+		
 	</main>
 
 </Layout>
