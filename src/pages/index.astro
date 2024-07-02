@@ -27,8 +27,7 @@ import Contact from '../components/Contact.astro';
 					<span id="erlingText" class="block">Fabricio</span>Jordán
 				</h1>
 				<footer id="jobCard" class="relative [&>*]:text-[#868a9b] bg-[#f5f5f5] py-2 px-4 flex flex-row justify-center items-center gap-2 font-Syne">
-					<span class="job">UI/UX Designer</span>
-					<span class="job">Web Developer</span>
+					<span class="job pr-4">Web Developer</span>
 					<span>Web Designer</span>
 				</footer>
 			</article>
@@ -57,12 +56,6 @@ import Contact from '../components/Contact.astro';
 
 
 <style>
-	.serviceSvg{
-		filter: opacity(0.4);
-		transition: filter 0.4s ease-in-out;
-	}.listOfServices:hover .serviceSvg{
-		filter: opacity(1);
-	}
 	
     .accordion-content {
     	transition: max-height 0.3s ease-out, padding 0.3s ease;
@@ -75,8 +68,6 @@ import Contact from '../components/Contact.astro';
 	#jobCard > span{
 		position: relative;
 		display: inline-block;
-		padding-right: 15px;
-		margin-right: 10px;
 	}
 	#jobCard > span.job::after{
 		position: absolute;
